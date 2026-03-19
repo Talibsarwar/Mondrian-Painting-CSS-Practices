@@ -6,96 +6,134 @@
     <title>Exercise One</title>
     <style>
         .container{
-            height: 748px;
-            width: 748px;
             display: grid;
-            background-color: #000;
-            grid-template-columns: 89px 102px 99px 210px 129px 129px 37px;
-            grid-template-rows: 92px 213px 210px 95px 95px 48px 35px;
+            width: 748px;
+            height: 748px;
+            background: #1A1A1A;
+            /* EXACT TRACK SIZES (from image proportions) */
+            grid-template-columns: 320px 198px 153px 50px;
+            grid-template-rows: 414px 130px 155px 22px;
             gap: 9px;
+            }
+
+        /* DEFAULT WHITE */
+        .item {
+            background: #F7F6F2;
+            }
+
+        /* COLORS */
+        .red    { background: #D7262E; }
+        .blue   { background: #1C3F94; }
+        .yellow1, .yellow2, .yellow3 { background: #F2C500; }
+        .black  { background: #1A1A1A; }
+
+        /* --- EXACT PLACEMENT --- */
+        /* RED (top-left big block) */
+        .red {
+            grid-column: 1;
+            grid-row: 1;
         }
-        .item{
-            background-color: #E1E3CC;
+        /* TOP ROW */
+        .white1 {
+            grid-column: 2 / span 3;
+            grid-row: 1;
         }
-        .unique-grey{
-        background-color: #D1D1CF;
+        /* LEFT VERTICAL WHITE */
+        .white2 {
+            grid-column: 1;
+            grid-row: 2 / span 2;
         }
-        .grey1{
-            background-color: #EFF6EF;
+        /* CENTER WHITE */
+        .white3 {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+        }
+        /* RIGHT SMALL BLUE */
+        .blue {
+        grid-column: 4;
+        grid-row: 2;
+        }
+        /* MIDDLE LOWER */
+        .white4 {
+        grid-column: 3;
+        grid-row: 3;
+        }
+        /* --- YELLOW BLOCKS (3 separate ones as in image) --- */
+
+        /* Main yellow */
+        .yellow1 {
+        grid-column: 2;
+        grid-row: 3;
         }
 
-        .grey2{
-            background-color: #EFF6EF;
+        /* Small yellow right */
+        .yellow2 {
+        grid-column: 4;
+        grid-row: 3;
         }
 
-        .grey3{
-            background-color: #EFF6EF;
+        /* Thin yellow bottom */
+        .yellow3 {
+        grid-column: 2;
+        grid-row: 4;
         }
-        .grey4{
-            background-color: #EFF6EF;
+
+        /* --- BOTTOM ROW --- */
+        .white5 {
+        grid-column: 1;
+        grid-row: 4;
         }
-        .dark-grey1{
-            background-color: #C4BDB8;
+
+        .white6 {
+        grid-column: 3;
+        grid-row: 4;
         }
-        .dark-grey2{
-            background-color: #C4BDB8;
+
+        /* BLACK small block */
+        .black {
+        grid-column: 4;
+        grid-row: 4;
+        }/* --- BOTTOM ROW --- */
+        .white5 {
+        grid-column: 1;
+        grid-row: 4;
         }
-        .yellow1
-        {
-            background-color: #F6D469;
+
+        .white6 {
+        grid-column: 3;
+        grid-row: 4;
         }
-        .yellow2{
-            background-color: #F6D469;
-        }
-        .yellow3{
-            background-color: #F6D469;
-        }
-        .red1{
-            background-color: #E23125;
-        }
-        .red2{
-            background-color: #E23125;
-        }
-        .black1{
-            background-color: #1C0C09;
-        }
-        .black2{
-            background-color: #1C0C09;
-        }
-        .blue{
-            background-color: #260F9A;
+
+        /* BLACK small block */
+        .black {
+        grid-column: 4;
+        grid-row: 4;
         }
     </style>
 </head>
-<body style="display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;">
+<body style="margin: 0;
+             height: 100vh;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             background: #ddd;">
+
     <div class="container">
-        <div class="item grey1"></div>
+        <div class="item red"></div>
+
         <div class="item white1"></div>
-        <div class="item yellow1"></div>
         <div class="item white2"></div>
-
-        <div class="item grey2"></div>
-        <div class="item red1"></div>
-        <div class="item yellow2"></div>
-
-        <div class="item grey3"></div>
-        <div class="item black1"></div>
-        <div class="item dark-grey1"></div>
-        <div class="item grey4"></div>
-
-        <div class="item yellow3"></div>
-        <div class="item dark-grey2"></div>
-        <div class="item blue"></div>
-        <div class="item red2"></div>
-
         <div class="item white3"></div>
-        <div class="item black2"></div>
-        <div class="item unique-grey"></div>
-    </div>
+        <div class="item white4"></div>
+        <div class="item white5"></div>
+        <div class="item white6"></div>
+
+        <div class="item yellow1"></div>
+        <div class="item yellow2"></div>
+        <div class="item yellow3"></div>
+
+        <div class="item blue"></div>
+        <div class="item black"></div>
+  </div>
 </body>
 </html>
